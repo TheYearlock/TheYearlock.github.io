@@ -7,4 +7,12 @@ document.addEventListener("DOMContentLoaded", () => {
             clearInterval(fadeEffect);
         }
     }, 100);
+    
 });
+
+function playMusic(){
+    const music = document.getElementById('music')
+    music.muted = false;
+    music.play();
+}
+ 
