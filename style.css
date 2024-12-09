@@ -15,25 +15,37 @@ body {
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     max-width: 600px;
-    text-align: center;
+    height: 90vh; /* Make the container fill most of the viewport */
+    display: flex;
+    flex-direction: column; /* Stack the heading and content vertically */
 }
 
 h1 {
     font-size: 2.5em;
     margin-bottom: 20px;
     color: #ff6f61;
+    text-align: center;
+    flex-shrink: 0; /* Prevent the header from shrinking */
 }
 
 .letter {
     font-size: 1.2em;
     line-height: 1.8;
     color: #555;
+    flex-grow: 1; /* Allow the letter section to expand and take up remaining space */
+    overflow-y: auto; /* Enable vertical scrolling for overflow */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    padding-right: 10px; /* Add padding for a clean look */
+    white-space: pre-wrap; /* Preserve spaces and line breaks */
+    word-wrap: break-word; /* Prevent long words from breaking layout */
+    text-align: left; /* Align text to the left */
 }
 
 .footer {
-    margin-top: 30px;
+    margin-top: 10px;
     font-size: 1.1em;
     color: #ff6f61;
+    flex-shrink: 0; /* Prevent footer from shrinking */
 }
 
 .footer p {
@@ -50,4 +62,16 @@ body::after {
     background: url('https://img.freepik.com/free-vector/vintage-neon-ornament-textured-background_53876-119916.jpg?t=st=1733764458~exp=1733768058~hmac=b8be310b94c99e9911e74b8dd6b274605abd77f4ec788d0959c316cc4d9b2c67&w=1060');
     opacity: 0.2;
     z-index: -1;
+}
+
+button {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transition: 50%;
+    color: midnightblue;
+    background-color: #fbc2eb;
+    border-radius: 1rem;
+    height: 2rem;
+    width: 5rem;
 }
